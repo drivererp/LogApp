@@ -8,6 +8,7 @@
         <div data-role='fieldcontain'>
           <label for='custCode'>Customer Code</label>
         <select name='custCode' id='custCode'>
+          <option value=''></option>
           <!--<option value=' '></option>
           <option value='01'>01 : D & H</option>
           <option value='07'>07 : Eaton Power Solutions Limited</option>
@@ -86,7 +87,7 @@
         <br />
         <br />
 
-        <a href='viewLog2.html'><input type='button' name='btnContinue' id='btnContinue' value='Go' data-inline='true'/></a>
+        <a href='viewLog2.html' onclick='getLogGrid()'><input type='button' name='btnContinue' id='btnContinue' value='Go' data-inline='true'/></a>
 
       </div>
       <div data-role="panel" id="menuPanel" data-position="left" data-display="push">

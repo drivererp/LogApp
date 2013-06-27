@@ -233,10 +233,9 @@ li>a.tappable-active{
 
       .info{
         font-weight:bolder;
-        background-color:lightblue;
         border-radius:6px;
         color: green;
-        float: left;
+        margin-left: 200px;
       }
 
       .label {
@@ -245,9 +244,7 @@ li>a.tappable-active{
       }
 
       .graph {
-        position: absolute;
-        right: 100px;
-        top: 20px;
+        position:relative;
       }
 
       .divider {
@@ -294,3 +291,23 @@ li>a.tappable-active{
       .hide {
         display:none;
       }
+
+    #logTable th {
+      background-color:lightblue;
+      color:black;
+      font-weight: bolder;
+    }
+
+    #logTable tr {
+      background-color:#DAF2F5;
+    }
+    #logTable tr:nth-child(even) {
+      background-color:white;
+    }
+
+    #logTable tr:last-child
+    {
+      background-color: lightblue;
+      color: black;
+      font-weight: bolder;
+    }

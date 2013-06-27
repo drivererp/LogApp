@@ -5,11 +5,13 @@
 function getCustCode ()
 {
 
+  var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+  var strOption = "";
   $.ajax(
   {
     type: 'POST',
     //  url: 'http://10.0.4.50/w15c0300app.php?CPROG=w15c0300.php',
-    url: 'http://127.0.0.1/ledgers/w99a66qr_ajax.php',
+    url: strUrl,
     cache: false,
     // contentType: "text/html",
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
@@ -22,9 +24,91 @@ function getCustCode ()
       //if (data.errmsg == "")
       //{
           $.each(data, function(key, val) {
-             document.getElementById('custCode').innerHTML = "<option value='" + val.custCode + "'>" + val.custName + "</option>";
+             strOption = "<option value='" + val.custCode + "'>" + val.custName + "</option>";
+             $("#custCode").append(strOption);
           });
       //}
+      //else
+      //{
+      //}
+    },
+    error: function(jqo, txt, err)
+    {
+      alert(txt);
+    }
+  }
+  );
+}
+
+function getLogGrid ()
+{
+  var custCode = $('#custCode').val();
+  var logType = $('#typeCode').val();
+  var product = $('#prodCode').val();
+  var fromDate = $('#fromDate').val();
+  var toDate = $('#toDate').val();
+  var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+
+  $.ajax(
+  {
+    type: 'POST',
+    //  url: 'http://10.0.4.50/w15c0300app.php?CPROG=w15c0300.php',
+    url: strUrl,
+    cache: false,
+    // contentType: "text/html",
+    // data: {'request':'GETPRODINFO','eanCode':prodCode},
+    data: {
+      request: 'logGrid',
+      'logType':logType,
+      'custCode':custCode,
+      'product':product,
+      'fromDate':fromDate,
+      'toDate':toDate
+    },
+    dataType: 'json',
+    success: function(data)
+    {
+      //if (data.errmsg == "")
+      //{
+      var table = document.getElementById('logTable');
+
+      var rowCount = table.rows.length;
+      var row = "0";
+      $('#logTable tr:not(:first)').remove();
+
+          $.each(data, function(key, val) {
+
+        row = table.insertRow(-1);
+
+
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = val.logNo;
+        cell1.style.textAlign = 'right';
+
+        cell1 = row.insertCell(1);
+        cell1.innerHTML = val.custCode;
+        cell1.style.textAlign = 'center';
+
+        cell1 = row.insertCell(2);
+        cell1.innerHTML = val.dateLog;
+        cell1.style.textAlign = 'center';
+
+        cell1 = row.insertCell(3);
+        cell1.innerHTML = val.openFor;
+        cell1.style.textAlign = 'right';
+
+        cell1 = row.insertCell(4);
+        cell1.innerHTML = val.desc;
+        cell1.style.textAlign = 'left';
+
+        cell1 = row.insertCell(5);
+        cell1.innerHTML = val.userLog;
+
+      });
+
+      //}
+      //
+      //
       //else
       //{
       //}
