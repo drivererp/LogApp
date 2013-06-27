@@ -5,7 +5,7 @@
 function getCustCode ()
 {
 
-  var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+  var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
   var strOption = "";
   $.ajax(
   {
@@ -47,7 +47,7 @@ function getLogGrid ()
   var product = $('#prodCode').val();
   var fromDate = $('#fromDate').val();
   var toDate = $('#toDate').val();
-  var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+  var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
 
   $.ajax(
   {

@@ -15,7 +15,7 @@ $('#home').live('pageshow',function(event, ui){
   //first vla in array, Jan is xaxis title - If use same one twice data is plotted against it no
   //  as a new point in sequence
 
-    var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+    var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
 
     $.ajax(
   {
@@ -56,7 +56,7 @@ $('#graph').live('pageshow',function(event, ui){
   //page show only works here - does not work in index.html footer
   //alert('page show');
 
-  var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+  var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
  $.ajax(
   {
     type: 'POST',
@@ -142,7 +142,7 @@ $('#home').live('pageshow',function(event, ui){
   //page show only works here - does not work in index.html footer
   //alert('page show');
 
-  var strUrl = 'http://' + localStorage.url + '/ledgers/w99a66qr_ajax.php';
+  var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
  $.ajax(
   {
     type: 'POST',
