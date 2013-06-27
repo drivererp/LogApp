@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "uk.co.driveerp.bliss"
+        id        = "uk.co.driveerp.log"
         versionCode="10"
         version   = "1.0.0">
 
   <!-- versionCode is optional and Android only -->
 
-  <name>BLISS</name>
+  <name>Log Application</name>
 
   <description>
-    Menu of BLISS applications
+    Logging System App
   </description>
 
   <author href="http://www.drivecomputing.co.uk" email="jasonm@drivecomputing.co.uk">
