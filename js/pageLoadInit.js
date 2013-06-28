@@ -27,7 +27,7 @@ $('#home').live('pageshow',function(event, ui){
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
       request: 'STATS1',
-      logType: 'log'
+      logType: 'LOG'
     },
     dataType: 'json',
     success: function(data)
@@ -67,7 +67,7 @@ $('#graph').live('pageshow',function(event, ui){
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
       request: 'STATS1',
-      logType: 'log'
+      logType: 'LOG'
     },
     dataType: 'json',
     success: function(data)
@@ -153,7 +153,7 @@ $('#home').live('pageshow',function(event, ui){
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
       request: 'STATS1',
-      logType: 'log'
+      logType: 'LOG'
     },
     dataType: 'json',
     success: function(data)

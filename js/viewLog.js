@@ -81,10 +81,22 @@ function getLogGrid ()
         row = table.insertRow(-1);
 
 
-        var cell1 = row.insertCell(0);
-        cell1.innerHTML = val.logNo;
-        cell1.style.textAlign = 'right';
-
+var cell1 = row.insertCell(0);
+//        cell1.innerHTML = val.logNo;
+//        cell1.style.textAlign = 'right';
+//
+        var element = document.createElement("input");
+          //Assign different attributes to the element.
+        element.type = 'button';
+        element.value = val.logNo;
+        element.name = 'logCode';
+        element.onclick = function() {
+        $.mobile.changePage("#logModal");
+        // document.location.href = "genorenq.html";
+        sessionStorage.logCode = val.logNo;
+            }
+            cell1.appendChild(element);
+            
         cell1 = row.insertCell(1);
         cell1.innerHTML = val.custCode;
         cell1.style.textAlign = 'center';
@@ -94,15 +106,8 @@ function getLogGrid ()
         cell1.style.textAlign = 'center';
 
         cell1 = row.insertCell(3);
-        cell1.innerHTML = val.openFor;
-        cell1.style.textAlign = 'right';
-
-        cell1 = row.insertCell(4);
         cell1.innerHTML = val.desc;
         cell1.style.textAlign = 'left';
-
-        cell1 = row.insertCell(5);
-        cell1.innerHTML = val.userLog;
 
       });
 
