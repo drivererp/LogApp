@@ -115,7 +115,10 @@ var cell1 = row.insertCell(0);
         element.value = val.logNo;
         element.name = 'logCode';
         element.onclick = function() {
-        $.mobile.changePage("#logModal");
+        $("#logTableDiv").hide();
+        $("#logDetailsDiv").show();
+
+        $('#logNo').html(val.logNo);
         // document.location.href = "genorenq.html";
         sessionStorage.logCode = val.logNo;
             }
@@ -148,4 +151,10 @@ var cell1 = row.insertCell(0);
     }
   }
   );
+}
+
+function switchDivs()
+{
+  $("#logTableDiv").show();
+        $("#logDetailsDiv").hide();
 }

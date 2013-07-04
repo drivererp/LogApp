@@ -473,3 +473,27 @@ transform:scale(1)}
 transform:scale(.3)}
 
 }
+
+#logDetailsDiv {
+  display: none;
+}
+
+    #logDetailsTable th {
+      background-color:lightblue;
+      color:black;
+      font-weight: bolder;
+    }
+
+    #logDetailsTable tr {
+      background-color:#DAF2F5;
+    }
+    #logDetailsTable tr:nth-child(even) {
+      background-color:white;
+    }
+
+    #logDetailsTable tr:last-child
+    {
+      background-color: lightblue;
+      color: black;
+      font-weight: bolder;
+    }

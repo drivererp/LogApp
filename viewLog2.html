@@ -5,6 +5,7 @@
         <a href="#settings" data-rel="dialog" data-icon="gear">Settings</a>
       </div>
       <div data-role="content" class='scroll'>
+        <div id='logTableDiv'>
        <h1>Logs Table</h1>
           <table id='logTable'>
             <tr class='header'>
@@ -22,6 +23,7 @@
               </th>
             </tr>
           </table>
+        </div>
        <center>
        <div id="circularG">
           <div id="circularG_1" class="circularG">
@@ -42,6 +44,59 @@
           </div>
         </div>
        </center>
+
+
+        <div id='logDetailsDiv'>
+          <div class='label'>Log Number - </div> <div class='info' id='logNo' ></div>
+          <h1>Log Notes/ Information</h1>
+          <table id='logDetailsTable'>
+            <tr class='header'>
+              <th>
+                Date
+              </th>
+              <th>
+                Time
+              </th>
+              <th>
+                User
+              </th>
+              <th>
+                Description
+              </th>
+            </tr>
+            <tr>
+              <td>
+                1
+              </td>
+              <td>
+                2
+              </td>
+              <td>
+                3
+              </td>
+              <td>
+                4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                5
+              </td>
+              <td>
+                6
+              </td>
+              <td>
+                7
+              </td>
+              <td>
+                8
+              </td>
+            </tr>
+          </table>
+
+
+          <button onclick='switchDivs()'>Close Log Info</button>
+        </div>
 
       </div>
     </div>
