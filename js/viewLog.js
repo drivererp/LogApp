@@ -39,11 +39,6 @@ function getCustCode ()
               {
                 strOption = "";
               }
-            else if (val.custCode != "" && key <= 1)
-              {
-                strOption = "<option value='" + val.custCode + "' selected='selected'>" + val.custName + "</option>";
-                $('#custCode').selectmenu('refresh', true);
-              }
             else
               {
                 strOption = "<option value='" + val.custCode + "' >" + val.custName + "</option>";
