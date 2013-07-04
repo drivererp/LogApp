@@ -53,6 +53,42 @@ function saveSettings()
   localStorage.url = $('#urlSetting').val();
   localStorage.userNameApp = $('#userName').val();
   localStorage.passwordApp = $('#password').val();
+
+
+  var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
+  var strOption = "";
+  $.ajax(
+  {
+    type: 'POST',
+    //  url: 'http://10.0.4.50/w15c0300app.php?CPROG=w15c0300.php',
+    url: strUrl,
+    cache: false,
+    // contentType: "text/html",
+    // data: {'request':'GETPRODINFO','eanCode':prodCode},
+    data: {
+      request: 'validateSettings',
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
+    },
+    dataType: 'json',
+    success: function(data)
+    {
+      if (data.errmsg == "")
+        {
+          $.mobile.changePage("index.html");
+        }
+      else
+        {
+          alert("Your Login Details are incorrect!!!!!!");
+        }
+
+    },
+    error: function(jqo, txt, err)
+    {
+      alert(txt);
+    }
+  }
+  );
 }
     </script>
   </head>
@@ -169,7 +205,7 @@ function saveSettings()
           </select>
         </div>
 
-        <a href="#" data-rel="back" name='btnSaveSettings' id='btnSaveSettings' data-role="button">Save Settings</a>
+        <a href="#" name='btnSaveSettings' id='btnSaveSettings' data-role="button">Save Settings</a>
       </div>
     </div>
     <!-- END SETTINGS POP UP DIALOG BOX HTML -->

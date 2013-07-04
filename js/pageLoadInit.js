@@ -241,8 +241,6 @@ $('#home').live('pageshow',function(event, ui){
       else
       {
         alert(data.errmsg);
-        document.forms['frm1'].elements['prodCode'].value = "";
-        document.forms['frm1'].elements['prodCode'].focus();
       }
     },
     error: function(jqo, txt, err)
