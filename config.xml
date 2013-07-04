@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "uk.co.driveerp.log"
+        id        = "com.drivecomputing.logApp"
         versionCode="10"
         version   = "1.0.0">
 
@@ -39,7 +39,5 @@
   <feature name="http://api.phonegap.com/1.0/file"/>
 
   <gap:plugin name="BarcodeScanner" /> <!-- latest release -->
-
-
 
 </widget>

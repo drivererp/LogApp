@@ -16,7 +16,11 @@ $('#home').live('pageshow',function(event, ui){
   //  as a new point in sequence
 
     var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
-
+    var custCode = $('#custCode').val();
+  var logType = $('#typeCode').val();
+  var product = $('#prodCode').val();
+  var fromDate = $('#fromDate').val();
+  var toDate = $('#toDate').val();
     $.ajax(
   {
     type: 'POST',
@@ -27,7 +31,13 @@ $('#home').live('pageshow',function(event, ui){
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
       request: 'STATS1',
-      logType: 'LOG'
+      logType:'LOG',
+      'custCode':custCode,
+      'product':product,
+      'fromDate':fromDate,
+      'toDate':toDate,
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
     },
     dataType: 'json',
     success: function(data)
@@ -57,6 +67,11 @@ $('#graph').live('pageshow',function(event, ui){
   //alert('page show');
 
   var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
+  var custCode = $('#custCode').val();
+  var logType = $('#typeCode').val();
+  var product = $('#prodCode').val();
+  var fromDate = $('#fromDate').val();
+  var toDate = $('#toDate').val();
  $.ajax(
   {
     type: 'POST',
@@ -67,7 +82,13 @@ $('#graph').live('pageshow',function(event, ui){
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
       request: 'STATS1',
-      logType: 'LOG'
+      logType:'LOG',
+      'custCode':custCode,
+      'product':product,
+      'fromDate':fromDate,
+      'toDate':toDate,
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
     },
     dataType: 'json',
     success: function(data)
@@ -143,6 +164,11 @@ $('#home').live('pageshow',function(event, ui){
   //alert('page show');
 
   var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
+  var custCode = $('#custCode').val();
+  var logType = $('#typeCode').val();
+  var product = $('#prodCode').val();
+  var fromDate = $('#fromDate').val();
+  var toDate = $('#toDate').val();
  $.ajax(
   {
     type: 'POST',
@@ -153,7 +179,13 @@ $('#home').live('pageshow',function(event, ui){
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
       request: 'STATS1',
-      logType: 'LOG'
+      logType:'LOG',
+      'custCode':custCode,
+      'product':product,
+      'fromDate':fromDate,
+      'toDate':toDate,
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
     },
     dataType: 'json',
     success: function(data)

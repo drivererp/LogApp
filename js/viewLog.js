@@ -16,7 +16,9 @@ function getCustCode ()
     // contentType: "text/html",
     // data: {'request':'GETPRODINFO','eanCode':prodCode},
     data: {
-      request: 'custList'
+      request: 'custList',
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
     },
     dataType: 'json',
     success: function(data)
@@ -63,11 +65,14 @@ function getLogGrid ()
       'custCode':custCode,
       'product':product,
       'fromDate':fromDate,
-      'toDate':toDate
+      'toDate':toDate,
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
     },
     dataType: 'json',
     success: function(data)
     {
+      $("#circularG").hide();
       //if (data.errmsg == "")
       //{
       var table = document.getElementById('logTable');
@@ -96,7 +101,7 @@ var cell1 = row.insertCell(0);
         sessionStorage.logCode = val.logNo;
             }
             cell1.appendChild(element);
-            
+
         cell1 = row.insertCell(1);
         cell1.innerHTML = val.custCode;
         cell1.style.textAlign = 'center';
