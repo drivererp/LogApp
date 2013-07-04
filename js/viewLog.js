@@ -26,7 +26,29 @@ function getCustCode ()
       //if (data.errmsg == "")
       //{
           $.each(data, function(key, val) {
-             strOption = "<option value='" + val.custCode + "'>" + val.custName + "</option>";
+            if(key <= 1)
+              {
+                $("#emptyOption").hide();
+              }
+            else
+              {
+                $("#emptyOption").show();
+              }
+
+            if (val.custCode == "")
+              {
+                strOption = "";
+              }
+            else if (val.custCode != "" && key <= 1)
+              {
+                strOption = "<option value='" + val.custCode + "' selected='selected'>" + val.custName + "</option>";
+                $('#custCode').selectmenu('refresh', true);
+              }
+            else
+              {
+                strOption = "<option value='" + val.custCode + "' >" + val.custName + "</option>";
+              }
+
              $("#custCode").append(strOption);
           });
       //}
