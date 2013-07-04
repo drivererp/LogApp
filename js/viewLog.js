@@ -47,6 +47,7 @@ function getLogGrid ()
   var custCode = $('#custCode').val();
   var logType = $('#typeCode').val();
   var product = $('#prodCode').val();
+  var logStatus = $('#statusCode').val();
   var fromDate = $('#fromDate').val();
   var toDate = $('#toDate').val();
   var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
@@ -65,6 +66,7 @@ function getLogGrid ()
       'custCode':custCode,
       'product':product,
       'fromDate':fromDate,
+      'logStatus':logStatus,
       'toDate':toDate,
       'userName':localStorage.userNameApp,
       'password':localStorage.passwordApp
