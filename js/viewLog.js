@@ -105,6 +105,8 @@ function getLogGrid ()
 
           $.each(data, function(key, val) {
 
+            if (val.logNo != "")
+              {
         row = table.insertRow(-1);
 
 
@@ -195,6 +197,7 @@ var cell1 = row.insertCell(0);
         cell1 = row.insertCell(3);
         cell1.innerHTML = val.desc;
         cell1.style.textAlign = 'left';
+              }
 
       });
 
@@ -204,6 +207,7 @@ var cell1 = row.insertCell(0);
       //else
       //{
       //}
+
     },
     error: function(jqo, txt, err)
     {
