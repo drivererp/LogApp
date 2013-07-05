@@ -96,9 +96,12 @@ function getLogGrid ()
       //{
       var table = document.getElementById('logTable');
 
+
       var rowCount = table.rows.length;
       var row = "0";
+
       $('#logTable tr:not(:first)').remove();
+
 
           $.each(data, function(key, val) {
 
@@ -119,6 +122,63 @@ var cell1 = row.insertCell(0);
         $("#logDetailsDiv").show();
 
         $('#logNo').html(val.logNo);
+
+  var strUrl = 'http://' + localStorage.url + '/w99a66qr_ajax.php';
+  var strOption = "";
+  $.ajax(
+  {
+    type: 'POST',
+    //url: 'http://127.0.0.1/ledgers/w99a66qr_ajax.php',
+    url: strUrl,
+    cache: false,
+    // contentType: "text/html",
+    // data: {'request':'GETPRODINFO','eanCode':prodCode},
+    data: {
+      request: 'logNotes',
+      'logNumber':val.logNo,
+      'userName':localStorage.userNameApp,
+      'password':localStorage.passwordApp
+    },
+    dataType: 'json',
+    success: function(data)
+    {
+
+      var table2 = document.getElementById('logDetailsTable');
+      var row2 = "0";
+
+      $('#logDetailsTable tr:not(:first)').remove();
+      //if (data.errmsg == "")
+      //{
+          $.each(data, function(key, val) {
+            row2 = table2.insertRow(-1);
+
+        cell1 = row2.insertCell(0);
+        cell1.innerHTML = val.date;
+        cell1.style.textAlign = 'center';
+
+        cell1 = row2.insertCell(1);
+        cell1.innerHTML = val.time;
+        cell1.style.textAlign = 'center';
+
+        cell1 = row2.insertCell(2);
+        cell1.innerHTML = val.user;
+        cell1.style.textAlign = 'left';
+
+        cell1 = row2.insertCell(3);
+        cell1.innerHTML = val.desc;
+        cell1.style.textAlign = 'left';
+          });
+      //}
+      //else
+      //{
+      //}
+    },
+    error: function(jqo, txt, err)
+    {
+      alert(txt);
+    }
+  }
+  );
         // document.location.href = "genorenq.html";
         sessionStorage.logCode = val.logNo;
             }
