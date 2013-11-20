@@ -23,13 +23,13 @@
   <preference name="splash-screen-duration" value="3000" />
   <preference name="webviewbounce" value="false" />
 
-  <!-- <icon src="icon.png" /> -->
-  <icon src="img/bliss-blackberry.png" gap:platform="blackberry" />
-  <icon src="icons/ios/icon.png" gap:platform="ios" width="72" height="72" />
-  <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
-  <icon src="icons/ios/icon@2x.png" gap:platform="ios" width="114" height="114" />
+  <!-- DEBUG <icon src="icon.png" /> -->
+  <!-- DEBUG <icon src="img/bliss-blackberry.png" gap:platform="blackberry" /> -->
+  <!-- DEBUG <icon src="icons/ios/icon.png" gap:platform="ios" width="72" height="72" /> -->
+  <!-- DEBUG <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" /> -->
+  <!-- DEBUG <icon src="icons/ios/icon@2x.png" gap:platform="ios" width="114" height="114" /> -->
   <!-- retina iPad support: PhoneGap 2.5.0+ only -->
-  <icon src="icons/ios/icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+  <!-- DEBUG <icon src="icons/ios/icon-72@2x.png" gap:platform="ios" width="144" height="144" /> -->
 
   <gap:splash src="splash.png" />
   <plugin name="Storage" value="org.apache.cordova.Storage" />
