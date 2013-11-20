@@ -31,7 +31,7 @@
   <!-- retina iPad support: PhoneGap 2.5.0+ only -->
   <icon src="icons/ios/icon-72@2x.png" gap:platform="ios" width="144" height="144" />
 
-  <gap:splash src="splash.png" />
+  <!-- <gap:splash src="splash.png" /> -->
   <plugin name="Storage" value="org.apache.cordova.Storage" />
   <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
   <feature name="http://api.phonegap.com/1.0/camera"/>
