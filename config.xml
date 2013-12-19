@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.drivecomputing.logApp"
         versionCode="10"
-        version   = "1.0.0">
+        version   = "1.0">
 
   <!-- versionCode is optional and Android only -->
 
@@ -22,11 +22,14 @@
   <preference name="exit-on-suspend" value="true" />
   <preference name="splash-screen-duration" value="3000" />
   <preference name="webviewbounce" value="false" />
-  <icon src="icons/ios/VG-icon-72.png" />
+  <icon src="icons/ios/VG-icon-57.png" />
   <icon src="icons/ios/VG-icon-57.png" gap:platform="ios" width="57" height="57" />
   <icon src="icons/ios/VG-icon-72.png" gap:platform="ios" width="72" height="72" />
   <icon src="icons/ios/VG-icon-57-2x.png" gap:platform="ios" width="114" height="114" />
   <icon src="icons/ios/VG-icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+  <icon src="icons/ios/VG-icon-ipad.png" gap:platform="ios" width="76" height="76" />
+  <icon src="icons/ios/VG-icon-iphone-ipod.png" gap:platform="ios" width="120" height="120" />
+  <icon src="icons/ios/VG-icon-ipad2.png" gap:platform="ios" width="152" height="152" />
   <gap:splash src="splash.png" />
   <gap:splash gap:platform="ios" height="480" src="res/screen/ios/splash-for-logapp-iphone.png" width="320" />
   <gap:splash gap:platform="ios" height="960" src="res/screen/ios/splash-for-logapp-iphone2x.png" width="640" />
