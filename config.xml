@@ -22,31 +22,16 @@
   <preference name="exit-on-suspend" value="true" />
   <preference name="splash-screen-duration" value="3000" />
   <preference name="webviewbounce" value="false" />
-
-<!--
-  <icon src="icon.png" />
--->
   <icon src="icons/ios/VG-icon-72.png" />
-
-  <icon src="img/bliss-blackberry.png" gap:platform="blackberry" />
-<!--
-  <icon src="icons/ios/icon.png"       gap:platform="ios"        width="72"   height="72" />
-  <icon src="icons/ios/icon-72.png"    gap:platform="ios"        width="72"   height="72" />
-  <icon src="icons/ios/icon@2x.png"    gap:platform="ios"        width="144"  height="144" />
--->
-  <!-- retina iPad support: PhoneGap 2.5.0+ only -->
-<!--
-  <icon src="icons/ios/icon-72@2x.png" gap:platform="ios"        width="144"  height="144" />
--->
   <icon src="icons/ios/VG-icon-57.png" gap:platform="ios" width="57" height="57" />
   <icon src="icons/ios/VG-icon-72.png" gap:platform="ios" width="72" height="72" />
   <icon src="icons/ios/VG-icon-57-2x.png" gap:platform="ios" width="114" height="114" />
   <icon src="icons/ios/VG-icon-72-2x.png" gap:platform="ios" width="144" height="144" />
-
-<!--
   <gap:splash src="splash.png" />
--->
-  <gap:splash src="icons/ios/screen-iphone-portrait.png" />
+  <gap:splash gap:platform="ios" height="480" src="res/screen/ios/splash-for-logapp-iphone.png" width="320" />
+  <gap:splash gap:platform="ios" height="960" src="res/screen/ios/splash-for-logapp-iphone2x.png" width="640" />
+  <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/splash-for-logapp-ipad.png" width="768" />
+  <gap:splash gap:platform="ios" height="768" src="res/screen/ios/splash-for-logapp-ipad-landscape.png" width="1024" />
 
   <plugin name="Storage" value="org.apache.cordova.Storage" />
   <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
