@@ -245,7 +245,7 @@ $('#home').live('pageshow',function(event, ui){
     },
     error: function(jqo, txt, err)
     {
-      alert('Please go to the settings page and enter your IP address');
+      //alert('Please go to the settings page and enter your IP address');
     }
   }
   );
