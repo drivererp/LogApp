@@ -93,7 +93,7 @@ $('#graph').live('pageshow',function(event, ui){
     dataType: 'json',
     success: function(data)
     {
-      if (data.errmsg == "")
+      if (data.errmsg == "1")
       {
         //graph here ...
 
@@ -150,7 +150,7 @@ $('#graph').live('pageshow',function(event, ui){
     },
     error: function(jqo, txt, err)
     {
-      alert('Please go to the settings page and enter your IP address');
+      //alert('Please go to the settings page and enter your IP address');
     }
   }
   );
