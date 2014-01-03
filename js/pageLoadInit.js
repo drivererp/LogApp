@@ -143,7 +143,7 @@ $('#graph').live('pageshow',function(event, ui){
       }
       else
       {
-        alert(data.errmsg);
+        //alert(data.errmsg);
         document.forms['frm1'].elements['prodCode'].value = "";
         document.forms['frm1'].elements['prodCode'].focus();
       }
